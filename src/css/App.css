@@ -1,0 +1,15 @@
+main {
+    display: flex;
+    height: 90vh;
+    width: 90vw;
+    padding: 5vh 5vw;
+    flex-direction: column;
+}
+.topbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.main {
+    display: flex;
+}
