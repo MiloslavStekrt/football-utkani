@@ -8,6 +8,7 @@ span {
     justify-content: space-between;
     font-size: 20px;
     text-align: center;
+    padding: 5px 20px;
 }
 span button{
     border-radius: 20px;
@@ -15,6 +16,10 @@ span button{
     border: none;
 }
 span button:hover {
-    border: 1px solid gray;
-    padding: 4px 24px;
+    border: 5px solid rgb(212, 212, 212);
+    padding: 0px 20px;
+    border-radius: 0;
+}
+span.nadpis {
+    background-color: rgb(240, 240, 240);
 }

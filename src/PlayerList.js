@@ -6,13 +6,9 @@ const PlayerList = ({players, setPlayers}) => {
     return (
         <div>
             <section className="brankari">
-                <span>
+                <span className="nadpis">
                     <h1>Brankari</h1>
                     <button>+</button>
-                </span>
-                <span>
-                    <h1>Player start</h1>
-                    <button>x</button>
                 </span>
                 {players.filter(player => player.foot == true).map(player => {
                     return <Player player={player} 
@@ -21,7 +17,7 @@ const PlayerList = ({players, setPlayers}) => {
                 })}
             </section>
             <section className="hraci">
-                <span>
+                <span className="nadpis">
                     <h1>Hraci</h1>
                     <button>+</button>
                 </span>
