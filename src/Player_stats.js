@@ -188,7 +188,7 @@ const Player_stats = ({status, setStatus, setPlayers, players}) => {
                     <p>Vstřelené branky:</p>
                     <strong>{status.vstrele_branky}</strong>
                 </article>
-                <article>
+                <article className="buttons">
                     <button onClick={vb_plus}>+</button>
                     <button onClick={vb_minus}>-</button>
                 </article>
@@ -198,7 +198,7 @@ const Player_stats = ({status, setStatus, setPlayers, players}) => {
                     <p>Získané Branky: </p>
                     <strong>{status.ziskane_branky}</strong>
                 </article>
-                <article>
+                <article className="buttons">
                     <button onClick={zs_plus}>+</button>
                     <button onClick={zs_minus}>-</button>
                 </article>
@@ -208,7 +208,7 @@ const Player_stats = ({status, setStatus, setPlayers, players}) => {
                     <p>Asistence:</p>
                     <strong>{status.assistence}</strong>
                 </article>
-                <article>
+                <article className="buttons">
                     <button onClick={a_plus}>+</button>
                     <button onClick={a_minus}>-</button>
                 </article>
@@ -218,16 +218,23 @@ const Player_stats = ({status, setStatus, setPlayers, players}) => {
                     <p>Body: </p>
                     <strong>{status.bodu}</strong>
                 </article>
-                <article>
+                <article className="buttons">
                     <button onClick={b_plus}>+</button>
                     <button onClick={b_minus}>-</button>
                 </article>
             </section>
             <section>
-                <article></article>
-                <article></article>
+                <article>
+                    <p>Tresty: </p>
+                    <strong>{status.trestu}</strong>
+                </article>
+                <article className="buttons bottons_more">
+                    <button onClick={t_nul}>0</button>
+                    <button onClick={t_min}>5</button>
+                    <button onClick={t_med}>7</button>
+                    <button onClick={t_hei}>10</button>
+                </article>
             </section>
-            <p>Tresty:          {status.trestu}        <button onClick={t_nul}>0</button><button onClick={t_min}>5</button><button onClick={t_med}>7</button><button onClick={t_hei}>10</button></p>
         </div>
     )
 }
