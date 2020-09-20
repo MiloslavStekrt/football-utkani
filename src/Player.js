@@ -6,7 +6,7 @@ const Player = ({player, setPlayers, players, setStatus}) => {
     }
     return (
         <button onClick={showPlayer} className="span">
-            <p>{player.name}</p>
+            <p>{player.name}</p> 
             <button onClick={(e)=>{e.preventDefault(); 
                 setPlayers(players.filter(el => el.id !== player.id));}
                 }>x</button>

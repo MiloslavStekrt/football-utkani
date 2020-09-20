@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import './css/App.css';
 import PlayerList from './PlayerList';
 import Player_stats from './Player_stats';
@@ -15,14 +15,13 @@ const App = () => {
         {name:"Jirka Masek",foot:true, number:9,  id:Math.random()*1000, vstrele_branky: 0, ziskane_branky: 0, assistence: 0,bodu: 0, trestu: 0},
         {name:"Kral Simor",foot:true, number:24,  id:Math.random()*1000, vstrele_branky: 0, ziskane_branky: 0, assistence: 0,bodu: 0, trestu: 0}
     ]);
-    const [status, setStatus] = useState(
-        {name:"Jmeno Hrace",foot:true, number:0, id:Math.random()*1000, vstrele_branky: 0, ziskane_branky: 0, assistence: 0,bodu: 0, trestu: 0 }
-    );
+    const [status, setStatus] = useState(players[0]);
+    
     return (
         <main>
             <section className="topbar">
                 <h1>Name of turnament</h1>
-                <p>Saved</p>
+                <p></p>
             </section>
             <section className="main">
                 <div className="players">

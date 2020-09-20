@@ -182,7 +182,8 @@ const Player_stats = ({status, setStatus, setPlayers, players}) => {
     }
     return (
         <div className="mainStats">
-            <h1>{status.name}</h1>
+            
+            <h1>{status.name} - {status.foot? <small>Jsem Brankař</small>: <small>Jsem Hráč</small>}</h1>
             <section>
                 <article>
                     <p>Vstřelené branky:</p>
