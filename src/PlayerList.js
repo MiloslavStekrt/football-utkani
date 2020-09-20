@@ -2,33 +2,31 @@ import React from 'react';
 import './css/PlayerList.css';
 import Player from './Player';
 
-const PlayerList = ({players, setPlayers}) => {
+const PlayerList = ({players, setPlayers, setStatus}) => {
     return (
         <div>
             <section className="brankari">
-                <span className="nadpis">
+                <button className="nadpis span">
                     <h1>Brankari</h1>
                     <button>+</button>
-                </span>
-                {players.filter(player => player.foot == true).map(player => {
+                </button>
+                {players.filter(player => player.foot === true).map(player => {
                     return <Player player={player} 
                         setPlayers={setPlayers} 
-                        players={players} />
+                        players={players} 
+                        setStatus={setStatus}/>
                 })}
             </section>
             <section className="hraci">
-                <span className="nadpis">
+                <button className="nadpis span">
                     <h1>Hraci</h1>
                     <button>+</button>
-                </span>
-
-                {/* {...state,currentMenu: action.menu.filter((menu) =>
-state.currentCategoryId == menu.category_id)} */}
-
-                {players.filter(player => player.foot == false).map(player => {
+                </button>
+                {players.filter(player => player.foot === false).map(player => {
                     return <Player player={player} 
                         setPlayers={setPlayers} 
-                        players={players} />
+                        players={players} 
+                        setStatus={setStatus} />
                 })}
             </section>
         </div>
