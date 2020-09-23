@@ -15,6 +15,7 @@
     border-bottom: 2px solid black;
     padding: 40px 0;
 }
+
 .mainStats section {
     display: flex;
     flex-direction: row;
@@ -31,4 +32,8 @@
 }
 .mainStats article.buttons button{
     flex: 0.5;
+    border-radius: 10px;
+    background: green;
+    border: 0;
+    color: white;
 }

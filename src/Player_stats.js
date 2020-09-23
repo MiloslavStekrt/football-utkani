@@ -1,123 +1,123 @@
 import React from 'react';
 import './css/Player_stats.css';
 
-const Player_stats = ({status, setStatus, setPlayers, players}) => {
+const Player_stats = ({ status, setStatus, setPlayers, players }) => {
     const vb_plus = () => {
         setPlayers(players.map(item => {
-            if(item.id === status.id){
+            if (item.id === status.id) {
                 return {
-                    ...item, vstrele_branky: item.vstrele_branky+1
+                    ...item, vstrele_branky: item.vstrele_branky + 1
                 }
             } return item;
         }));
         setStatus(
             {
-                ...status, vstrele_branky: status.vstrele_branky+1
+                ...status, vstrele_branky: status.vstrele_branky + 1
             }
         )
     }
     const vb_minus = () => {
-        if(status.vstrele_branky !== 0){
+        if (status.vstrele_branky !== 0) {
             setPlayers(players.map(item => {
-                if(item.id === status.id){
+                if (item.id === status.id) {
                     return {
-                        ...item, vstrele_branky: item.vstrele_branky-1
+                        ...item, vstrele_branky: item.vstrele_branky - 1
                     }
                 } return item;
             }));
             setStatus(
                 {
-                    ...status, vstrele_branky: status.vstrele_branky-1
+                    ...status, vstrele_branky: status.vstrele_branky - 1
                 }
             )
         }
     }
     const zs_plus = () => {
         setPlayers(players.map(item => {
-            if(item.id === status.id){
+            if (item.id === status.id) {
                 return {
-                    ...item, ziskane_branky: item.ziskane_branky+1
+                    ...item, ziskane_branky: item.ziskane_branky + 1
                 }
             } return item;
         }));
         setStatus(
             {
-                ...status, ziskane_branky: status.ziskane_branky+1
+                ...status, ziskane_branky: status.ziskane_branky + 1
             }
         )
     }
     const zs_minus = () => {
-        if(status.ziskane_branky !== 0){
+        if (status.ziskane_branky !== 0) {
             setPlayers(players.map(item => {
-                if(item.id === status.id){
+                if (item.id === status.id) {
                     return {
-                        ...item, ziskane_branky: item.ziskane_branky-1
+                        ...item, ziskane_branky: item.ziskane_branky - 1
                     }
                 } return item;
             }));
             setStatus(
                 {
-                    ...status, ziskane_branky: status.ziskane_branky-1
+                    ...status, ziskane_branky: status.ziskane_branky - 1
                 }
             )
         }
     }
     const a_plus = () => {
         setPlayers(players.map(item => {
-            if(item.id === status.id){
+            if (item.id === status.id) {
                 return {
-                    ...item, assistence: item.assistence+1
+                    ...item, assistence: item.assistence + 1
                 }
             } return item;
         }));
         setStatus(
             {
-                ...status, assistence: status.assistence+1
+                ...status, assistence: status.assistence + 1
             }
         )
     }
     const a_minus = () => {
-        if(status.assistence !== 0){
+        if (status.assistence !== 0) {
             setPlayers(players.map(item => {
-                if(item.id === status.id){
+                if (item.id === status.id) {
                     return {
-                        ...item, assistence: item.assistence-1
+                        ...item, assistence: item.assistence - 1
                     }
                 } return item;
             }));
             setStatus(
                 {
-                    ...status, assistence: status.assistence-1
+                    ...status, assistence: status.assistence - 1
                 }
             )
         }
     }
     const b_plus = () => {
         setPlayers(players.map(item => {
-            if(item.id === status.id){
+            if (item.id === status.id) {
                 return {
-                    ...item, bodu: item.bodu+1
+                    ...item, bodu: item.bodu + 1
                 }
             } return item;
         }));
         setStatus(
             {
-                ...status, bodu: status.bodu+1
+                ...status, bodu: status.bodu + 1
             }
         )
     }
     const b_minus = () => {
-        if(status.bodu !== 0){
+        if (status.bodu !== 0) {
             setPlayers(players.map(item => {
-                if(item.id === status.id){
+                if (item.id === status.id) {
                     return {
-                        ...item, bodu: item.bodu-1
+                        ...item, bodu: item.bodu - 1
                     }
                 } return item;
             }));
             setStatus(
                 {
-                    ...status, bodu: status.bodu-1
+                    ...status, bodu: status.bodu - 1
                 }
             )
         }
@@ -126,7 +126,7 @@ const Player_stats = ({status, setStatus, setPlayers, players}) => {
     //Tresty funkce 
     const t_nul = () => {
         setPlayers(players.map(item => {
-            if(item.id === status.id){
+            if (item.id === status.id) {
                 return {
                     ...item, trestu: 0
                 }
@@ -140,7 +140,7 @@ const Player_stats = ({status, setStatus, setPlayers, players}) => {
     }
     const t_min = () => {
         setPlayers(players.map(item => {
-            if(item.id === status.id){
+            if (item.id === status.id) {
                 return {
                     ...item, trestu: 5
                 }
@@ -154,7 +154,7 @@ const Player_stats = ({status, setStatus, setPlayers, players}) => {
     }
     const t_med = () => {
         setPlayers(players.map(item => {
-            if(item.id === status.id){
+            if (item.id === status.id) {
                 return {
                     ...item, trestu: 7
                 }
@@ -168,7 +168,7 @@ const Player_stats = ({status, setStatus, setPlayers, players}) => {
     }
     const t_hei = () => {
         setPlayers(players.map(item => {
-            if(item.id === status.id){
+            if (item.id === status.id) {
                 return {
                     ...item, trestu: 10
                 }
@@ -182,8 +182,8 @@ const Player_stats = ({status, setStatus, setPlayers, players}) => {
     }
     return (
         <div className="mainStats">
-            
-    <h1>{status.name} {status.foot? <small> - Brankař {status.number}</small>: <small>- č. {status.number}</small>}</h1>
+
+            <h1>{status.name} {status.foot ? <small> - Brankař {status.number}</small> : <small>- č. {status.number}</small>}</h1>
             <section>
                 <article>
                     <p>Vstřelené branky:</p>

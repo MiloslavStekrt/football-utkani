@@ -11,13 +11,17 @@
     padding: 5px 20px;
     width: 100%;
 }
+button.span:hover{
+    background-color: rgb(209, 209, 209);
+    border-radius: 10px;
+}
 .span button{
     border-radius: 20px;
     padding: 5px 25px;
     border: none;
 }
 .span{
-    border: none
+    border: none;
 }
 .span button:hover {
     border: 5px solid rgb(212, 212, 212);
@@ -27,4 +31,5 @@
 .span.nadpis {
     background-color: rgb(240, 240, 240);
     border: none;
+    width: 84%;
 }
