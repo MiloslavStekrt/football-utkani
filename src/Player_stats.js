@@ -181,8 +181,8 @@ const Player_stats = ({ status, setStatus, setPlayers, players }) => {
         )
     }
     return (
-        <div className="mainStats">
-
+        <>
+            {players[0] ? <div className="mainStats">
             <h1>{status.name} {status.foot ? <small> - Brankař {status.number}</small> : <small>- č. {status.number}</small>}</h1>
             <section>
                 <article>
@@ -236,7 +236,8 @@ const Player_stats = ({ status, setStatus, setPlayers, players }) => {
                     <button onClick={t_hei}>10</button>
                 </article>
             </section>
-        </div>
+        </div> : <div><h1>You don't select any players.</h1></div>}
+        </>
     )
 }
 

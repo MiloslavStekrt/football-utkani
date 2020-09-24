@@ -22,11 +22,7 @@ const App = () => {
         {name:"Kral Simor",foot:true, number:24,  id:Math.random()*1000, vstrele_branky: 0, ziskane_branky: 0, assistence: 0,bodu: 0, trestu: 0}
     ]);
     const [status, setStatus] = useState(players[0]);
-    const [player_line, setPlayer_line] = useState([
-        {name:"Jirka Masek",foot:true, number:9,  id:Math.random()*1000, vstrele_branky: 0, ziskane_branky: 0, assistence: 0,bodu: 0, trestu: 0},
-        {name:"Kral Simor",foot:true, number:24,  id:Math.random()*1000, vstrele_branky: 0, ziskane_branky: 0, assistence: 0,bodu: 0, trestu: 0}
-    ]);
-    
+    const [player_line, setPlayer_line] = useState([]);
     return (
         <main>
             <section className="topbar">
@@ -45,12 +41,14 @@ const App = () => {
                     setPlayers={setPlayer_line} 
                     players={player_line}/>
             </section>
-            <Add_player players={players} 
+            <Add_player players={players}
+                setStatus={setStatus}
                 setPlayer_line={setPlayer_line} 
                 player_line={player_line} 
                 foot={true}
                 type="add_brankar"/>
-            <Add_player players={players} 
+            <Add_player players={players}
+                setStatus={setStatus} 
                 setPlayer_line={setPlayer_line} 
                 player_line={player_line} 
                 foot={false}

@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import './css/Add_player.css';
 
-const Add_player = ({players, setPlayer_line, player_line, foot, type}) => {
+const Add_player = ({players, setPlayer_line, player_line, foot, type, setStatus}) => {
     const [selectValue, setSelectValue] = useState();
     const changeSelect = (e) => {
         setSelectValue(
@@ -14,6 +14,7 @@ const Add_player = ({players, setPlayer_line, player_line, foot, type}) => {
                 ...player_line, {name:selectValue[0].name, foot:selectValue[0].foot, number:selectValue[0].number,  id:selectValue[0].id, vstrele_branky: selectValue[0].vstrele_branky, ziskane_branky: selectValue[0].ziskane_branky, assistence: selectValue[0].assistence, bodu: selectValue[0].bodu, trestu: selectValue[0].trestu}
             ]);
             document.getElementById(type).style.display = "none";
+            setStatus(selectValue[0])
         }
     }
     return (
