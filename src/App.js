@@ -34,7 +34,8 @@ const App = () => {
                     <PlayerList 
                         players={player_line} 
                         setPlayers={setPlayer_line} 
-                        setStatus={setStatus} />
+                        setStatus={setStatus} 
+                        status={status}/>
                 </div>
                 <Player_stats status={status} 
                     setStatus={setStatus} 
@@ -42,12 +43,14 @@ const App = () => {
                     players={player_line}/>
             </section>
             <Add_player players={players}
+                status={status}
                 setStatus={setStatus}
                 setPlayer_line={setPlayer_line} 
                 player_line={player_line} 
                 foot={true}
                 type="add_brankar"/>
             <Add_player players={players}
+                status={status}
                 setStatus={setStatus} 
                 setPlayer_line={setPlayer_line} 
                 player_line={player_line} 

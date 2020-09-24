@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import './css/Player_stats.css';
 
 const Player_stats = ({ status, setStatus, setPlayers, players }) => {
@@ -180,9 +180,10 @@ const Player_stats = ({ status, setStatus, setPlayers, players }) => {
             }
         )
     }
+    
     return (
         <>
-            {players[0] ? <div className="mainStats">
+            {players[0] && status ? <div className="mainStats">
             <h1>{status.name} {status.foot ? <small> - Brankař {status.number}</small> : <small>- č. {status.number}</small>}</h1>
             <section>
                 <article>
@@ -236,7 +237,8 @@ const Player_stats = ({ status, setStatus, setPlayers, players }) => {
                     <button onClick={t_hei}>10</button>
                 </article>
             </section>
-        </div> : <div><h1>You don't select any players.</h1></div>}
+        </div> : <div>
+            <h1>You don't select any players.</h1></div>}
         </>
     )
 }

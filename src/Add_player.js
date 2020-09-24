@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import './css/Add_player.css';
 
-const Add_player = ({players, setPlayer_line, player_line, foot, type, setStatus}) => {
+const Add_player = ({players, setPlayer_line, player_line, foot, type, setStatus, status}) => {
     const [selectValue, setSelectValue] = useState();
     const changeSelect = (e) => {
         setSelectValue(

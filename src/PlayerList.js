@@ -2,7 +2,7 @@ import React from 'react';
 import './css/PlayerList.css';
 import Player from './Player';
 
-const PlayerList = ({players, setPlayers, setStatus}) => {
+const PlayerList = ({players, setPlayers, setStatus, status}) => {
     const add_new_player = () => {
         document.getElementById("add_panel").style.display = "flex"
     }
@@ -21,7 +21,8 @@ const PlayerList = ({players, setPlayers, setStatus}) => {
                     return <Player player={player} 
                         setPlayers={setPlayers} 
                         players={players} 
-                        setStatus={setStatus}/>
+                        setStatus={setStatus}
+                        status={status}/>
                 }): <div><h1>Nothing Include</h1></div>}
             </section>
             <section className="hraci">
