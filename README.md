@@ -7,4 +7,7 @@ This project is football tournaments that include all function you can need.
 
 ----
 
-This project don't have lot of function but in the future it can have.
+This project i create for people need fast way to save documentation of their teams (this is for children Evropan's football)
+
+----
+want add function like add your team more section more sport turnaments that one.
