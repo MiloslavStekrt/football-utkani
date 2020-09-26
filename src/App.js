@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './css/App.css';
 import PlayerList from './PlayerList';
 import Player_stats from './Player_stats';
@@ -7,7 +7,7 @@ import NavBar from './NavBar';
 
 const App = () => {
     const [players, setPlayers] = useState([]);
-    const [status, setStatus] = useState(players[0]);
+    const [status, setStatus] = useState([]);
     const [player_line, setPlayer_line] = useState([]);
     return (
         <div className="app">

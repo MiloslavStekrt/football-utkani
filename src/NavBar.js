@@ -21,6 +21,16 @@ const NavBar = ({players, setPlayers, player_line, setPlayer_line}) => {
             hiddenSideBar();
         }
     }
+    const saveStorge =()=>{
+        localStorage.setItem("players", JSON.stringify(players))
+    }
+    const getStorge =()=>{
+        if(localStorage.getItem("players") === null){
+            localStorage.setItem("players", JSON.stringify([]))
+        }else{
+            setPlayers(JSON.parse(localStorage.getItem("players")))
+        }
+    }
     return (
         <div className="topbar_m">
             <section className={ visible === true? "sideBar visibleVisible": "sideBar visibleHidden"}>
@@ -33,6 +43,10 @@ const NavBar = ({players, setPlayers, player_line, setPlayer_line}) => {
                         <input value={footis} onChange={(e)=>{setfootis(e.target.checked)}} type="checkbox"/>
                     </span>
                     <button onClick={addPlayer_handler}>Přidat</button>
+                    <hr/>
+                    <h1>Data z localStorage</h1>
+                    <button onClick={saveStorge}>Save</button>
+                    <button onClick={getStorge}>Get</button>
                 </form>
                 <form className="right" onClick={hiddenSideBar}></form>
             </section>
