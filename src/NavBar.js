@@ -40,7 +40,6 @@ const NavBar = ({players, setPlayers, player_line, setPlayer_line}) => {
                 <button className="name">
                     <h1>Name of turnament</h1>
                 </button>
-                <input type="text"/>
                 <button onClick={showSideBar}>
                     <h1>Menu</h1>
                 </button>
