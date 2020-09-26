@@ -16,11 +16,13 @@ const Add_player = ({players, setPlayer_line, player_line, foot, type, setStatus
             document.getElementById(type).style.display = "none";
             setStatus(selectValue[0])
         }
+
     }
     return (
         <div id={type} className="add_panel">
             <div className="add-center">
                 <select onChange={changeSelect}>
+                    <option></option>
                     {players.filter(player => player.foot === foot).map(player => (
                         <option value={player.id}>{player.name}</option>
                     ))}
